@@ -24,7 +24,7 @@ Detects de novo variants in a child's genome by comparing it with the genomes of
 - **Parent 2 VCF File**: VCF file with the second parent's variants.
 
 #### Output
-- **De Novo Variants VCF File**: VCF file containing only the de novo variants identified in the child's genome.
+- **De novo Variants VCF File**: VCF file containing only the de novo variants identified in the child's genome.
 
 ### 3. `genome_location.R`
 #### Description
@@ -42,7 +42,7 @@ Classifies variants based on their genomic location (e.g., exonic, intronic) and
 Checks for overlaps between de novo variants and variants in the gnomAD database.
 
 #### Input
-- **De Novo VCF Directory**: Directory with de novo VCF files.
+- **De novo VCF Directory**: Directory with de novo VCF files.
 - **gnomAD VCF File**: Reference VCF file from the gnomAD database.
 
 #### Output
