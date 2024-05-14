@@ -90,7 +90,7 @@ df_parent_stats = pd.DataFrame(parent_stats).T
 plot_statistics(df_parent_stats, "Parent Structural Variants", "~/parent.png")
 
 df_children_stats = pd.DataFrame(children_stats).T
-plot_statistics(df_children_stats, "Children Structural Variants", "~/hildren.png")
+plot_statistics(df_children_stats, "Children Structural Variants", "~/children.png")
 
 # Perform T-test for each mutation type
 t_test_results = {}
