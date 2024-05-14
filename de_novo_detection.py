@@ -28,7 +28,7 @@ def overlap_percentage(interval1, interval2):"Calculate the overlap percentage b
     return (overlap_length / min(interval1_length, interval2_length)) * 100
 
 "Identify de novo variants in a child's genome and compare with parent genomes"
-def find_denovo_variants_in_trio(child_variants, parent1_variants, parent2_variants, quality_threshold=40, overlap_threshold=70):
+def find_denovo_variants_in_trio(child_variants, parent1_variants, parent2_variants, quality_threshold=100, overlap_threshold=70):
     denovo_variant_records = []
     for child_variant in child_variants:
         if child_variant['qual'] < quality_threshold:
