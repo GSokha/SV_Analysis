@@ -73,7 +73,6 @@ for mut_type, counts in aggregate_counts.items():
 # Add average deletion length to statistics
 statistics['DEL']['AVG_DELETION_LENGTH'] = average_deletion_length
 
-# Convert the statistics to a DataFrame
 df_stats = pd.DataFrame(statistics).T
 
 # Check if 'DEL' type exists and if 'AVG_DELETION_LENGTH' is calculated
@@ -81,7 +80,6 @@ if 'DEL' in df_stats.index and 'AVG_DELETION_LENGTH' in statistics['DEL']:
     # Add 'AVG_DELETION_LENGTH' to 'DEL' row in DataFrame and rename to 'AVG_SVLEN'
     df_stats.loc['DEL', 'AVG_SVLEN'] = statistics['DEL']['AVG_DELETION_LENGTH']
 
-# Reorder and include all columns
 columns = ['MEAN', 'SE', 'SD', 'COUNTS'] #, 'AVG_SVLEN'] if 'AVG_SVLEN' in df_stats.columns else ['MEAN', 'SE', 'SD', 'COUNTS']
 df_stats = df_stats[columns]
 
